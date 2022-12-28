@@ -1,8 +1,11 @@
 package com.ozancanguz.e_commerceapp.data.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class ProductsItem(
     @SerializedName("description")
     val description: String,
@@ -14,4 +17,4 @@ data class ProductsItem(
     val price: Int,
     @SerializedName("title")
     val title: String
-)
+):Parcelable

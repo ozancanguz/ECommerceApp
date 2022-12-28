@@ -16,6 +16,12 @@
         <action
             android:id="@+id/action_productListFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment2"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
@@ -28,6 +34,9 @@
         <action
             android:id="@+id/action_productDetailFragment_to_favoriteFragment"
             app:destination="@id/favoriteFragment" />
+        <argument
+            android:name="currentProduct"
+            app:argType="com.ozancanguz.e_commerceapp.data.model.ProductsItem" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -37,6 +46,9 @@
         <action
             android:id="@+id/action_favoriteFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
     </fragment>
     <activity
         android:id="@+id/loginActivity"

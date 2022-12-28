@@ -3,10 +3,12 @@ package com.ozancanguz.e_commerceapp.data.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.data.model.Products
 import com.ozancanguz.e_commerceapp.data.model.ProductsItem
+import com.ozancanguz.e_commerceapp.ui.fragments.productlist.ProductListFragmentDirections
 import com.ozancanguz.e_commerceapp.util.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.products_row_layout.view.*
 
@@ -38,6 +40,19 @@ class ProductListAdapter:RecyclerView.Adapter<ProductListAdapter.ProductViewHold
 
         // image loading with glide
         holder.itemView.productImage.loadImage(currentProduct.imageUrl)
+
+
+        // sending data to details
+        holder.itemView.setOnClickListener {
+            val action=ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(currentProduct)
+            holder.itemView.findNavController().navigate(action)
+        }
+
+        holder.itemView.view_wishlist_icon.setOnClickListener {
+            holder.itemView.view_wishlist_icon.findNavController()
+                .navigate(R.id.action_productListFragment_to_favoriteFragment)
+        }
+
 
     }
 

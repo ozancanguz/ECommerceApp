@@ -1,14 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.productdetail.ProductDetailFragment">
+    android:background="#FFFFFF">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/detailsImage"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/detailsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Product Title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/detailsPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsImage" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/detailsPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+    android:textSize="20sp"
+        tools:text="300 US$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailsTitle" />
+
+
+    <TextView
+        android:id="@+id/details_fullDesc"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="378dp"
+        android:layout_height="94dp"
+        android:layout_margin="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/addToCartButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Very long description here" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#1aaa1a"
+        android:text="Add to cart"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsImage"
+        app:layout_constraintVertical_bias="0.723" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
