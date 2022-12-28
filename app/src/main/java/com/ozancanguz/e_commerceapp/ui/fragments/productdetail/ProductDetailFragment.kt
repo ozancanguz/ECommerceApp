@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
 import com.ozancanguz.e_commerceapp.databinding.FragmentProductDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProductDetailFragment : Fragment() {
     private var _binding: FragmentProductDetailBinding? = null
 

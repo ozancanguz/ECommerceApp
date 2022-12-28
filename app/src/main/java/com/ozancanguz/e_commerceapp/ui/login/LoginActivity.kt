@@ -12,7 +12,10 @@ import com.google.firebase.ktx.Firebase
 import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.databinding.ActivityLoginBinding
 import com.ozancanguz.e_commerceapp.ui.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

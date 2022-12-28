@@ -9,8 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
 import com.ozancanguz.e_commerceapp.databinding.FragmentProductListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProductListFragment : Fragment() {
     private var _binding: FragmentProductListBinding? = null
 
