@@ -58,7 +58,6 @@ class ProductListAdapter:RecyclerView.Adapter<ProductListAdapter.ProductViewHold
         }
 
 
-
     }
 
     override fun getItemCount(): Int {

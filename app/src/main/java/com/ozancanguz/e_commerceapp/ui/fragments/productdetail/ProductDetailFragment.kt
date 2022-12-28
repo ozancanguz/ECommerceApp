@@ -1,11 +1,8 @@
 package com.ozancanguz.e_commerceapp.ui.fragments.productdetail
 
 import android.os.Bundle
-import android.view.Gravity
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
 import com.ozancanguz.e_commerceapp.R
@@ -36,6 +33,9 @@ class ProductDetailFragment : Fragment() {
         // add to card
         addCard()
 
+        // set menu
+        setHasOptionsMenu(true)
+
         return view
     }
 
@@ -56,6 +56,14 @@ class ProductDetailFragment : Fragment() {
 
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.savetofav,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+
+
 
 
 
