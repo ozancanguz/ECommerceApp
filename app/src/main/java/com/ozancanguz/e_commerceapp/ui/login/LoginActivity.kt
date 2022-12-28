@@ -13,6 +13,7 @@ import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.databinding.ActivityLoginBinding
 import com.ozancanguz.e_commerceapp.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.login_error_toast.*
 import kotlinx.android.synthetic.main.login_toast.*
 
 
@@ -49,7 +50,11 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.passwordET.text.toString()
 
             if (email.isEmpty() || password.isEmpty()) {
-              Toast.makeText(this,"E mail or password empty",Toast.LENGTH_LONG).show()
+                Toast(this).apply {
+                    duration=Toast.LENGTH_LONG
+                    setGravity(Gravity.CENTER,0,0)
+                    view=layoutInflater.inflate(R.layout.login_error_toast,loginerror)
+                }.show()
 
             } else {
 
@@ -77,9 +82,12 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.emailET.text.toString()
             val password = binding.passwordET.text.toString()
             if (email.isEmpty() || password.isEmpty()) {
+                Toast(this).apply {
+                    duration=Toast.LENGTH_LONG
+                    setGravity(Gravity.CENTER,0,0)
+                    view=layoutInflater.inflate(R.layout.login_error_toast,loginerror)
+                }.show()
 
-                Toast.makeText(this,"E mail or password is empty", Toast.LENGTH_LONG)
-                    .show()
             } else {
 
                 auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
