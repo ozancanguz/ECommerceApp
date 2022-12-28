@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ozancanguz.e_commerceapp.R
+import com.ozancanguz.e_commerceapp.data.db.entities.FavoritesEntity
 import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
 import com.ozancanguz.e_commerceapp.databinding.FragmentProductDetailBinding
 import com.ozancanguz.e_commerceapp.util.Util.Companion.loadImage
+import com.ozancanguz.e_commerceapp.viewmodel.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.add_to_cart.*
 
@@ -18,6 +21,7 @@ class ProductDetailFragment : Fragment() {
 
     private val binding get() = _binding!!
 
+    private val productViewModel:ProductViewModel by viewModels()
     private val args:ProductDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -60,6 +64,20 @@ class ProductDetailFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.savetofav,menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId==R.id.savetofavmenu){
+          saveToFavorites()
+          Toast.makeText(requireContext(),"Save to favorites",Toast.LENGTH_LONG).show()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun saveToFavorites(){
+        var favoritesEntity=FavoritesEntity(0,args.currentProduct)
+        productViewModel.insertFavoriteProduct(favoritesEntity)
     }
 
 
