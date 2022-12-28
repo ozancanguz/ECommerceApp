@@ -9,6 +9,7 @@
 **Tools that I used** :
 
 - Navigation Component
+- Firebase authentication
 - Hilt for dependency injection
 - Retrofit 
 - Room
