@@ -6,16 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ozancanguz.e_commerceapp.R
+import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
+import com.ozancanguz.e_commerceapp.databinding.FragmentProductDetailBinding
 
 
 class ProductDetailFragment : Fragment() {
+    private var _binding: FragmentProductDetailBinding? = null
+
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_detail, container, false)
+        _binding = FragmentProductDetailBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+
+        return view
     }
 
 
