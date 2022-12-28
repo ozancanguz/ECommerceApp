@@ -7,5 +7,5 @@
         android:id="@+id/savetofavmenu"
         app:showAsAction="ifRoom"
         android:title="Save to favorites"
-        android:icon="@drawable/favorite" />
+        android:icon="@drawable/star" />
 </menu>
