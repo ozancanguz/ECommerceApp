@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
 import com.ozancanguz.e_commerceapp.data.Repository
+import com.ozancanguz.e_commerceapp.data.db.entities.FavoritesEntity
 import com.ozancanguz.e_commerceapp.data.db.entities.ProductEntity
 import com.ozancanguz.e_commerceapp.data.model.Products
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,6 +24,9 @@ class ProductViewModel@Inject constructor(private val repository: Repository, ap
 
     // for room part
     var listproductList:LiveData<List<ProductEntity>> = repository.local.listAllProducts().asLiveData()
+    var favProductList:LiveData<List<FavoritesEntity>> = repository.local.listAllFavoritesProducts().asLiveData()
+
+
 
     // for room insert product call
     fun insertProduct(productEntity: ProductEntity){
@@ -30,6 +34,15 @@ class ProductViewModel@Inject constructor(private val repository: Repository, ap
             repository.local.insertProduct(productEntity)
         }
     }
+
+    // for room insert fav call
+    fun insertFavoriteProduct(favoritesEntity: FavoritesEntity){
+        viewModelScope.launch {
+            repository.local.insertFavorites(favoritesEntity)
+        }
+    }
+
+
 
     // save to db
     fun saveProductsToDb(products:Products){
