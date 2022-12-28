@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "206858673439",
+    "project_id": "e-commerce-app-44f66",
+    "storage_bucket": "e-commerce-app-44f66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206858673439:android:aff373a141247b1f71e42a",
+        "android_client_info": {
+          "package_name": "com.ozancanguz.e_commerceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206858673439-df5hqvftok5qpn564oa7njlh1sepu6ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVbXftCwAtqrXWGwbnrutrpPcwd0_SqrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206858673439-df5hqvftok5qpn564oa7njlh1sepu6ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
