@@ -13,6 +13,7 @@ import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.databinding.ActivityLoginBinding
 import com.ozancanguz.e_commerceapp.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.login_toast.*
 
 
 @AndroidEntryPoint
@@ -54,8 +55,12 @@ class LoginActivity : AppCompatActivity() {
 
                 auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
 
-                   Toast.makeText(this,"Successful ! , Click on sign in.",Toast.LENGTH_LONG)
-                       .show()
+                    Toast(this).apply {
+                        duration=Toast.LENGTH_LONG
+                        setGravity(Gravity.CENTER,0,0)
+                        view=layoutInflater.inflate(R.layout.login_toast,logintoast)
+                    }.show()
+
 
                 }.addOnFailureListener {
                     Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG)
