@@ -1,4 +1,4 @@
-package com.ozancanguz.e_commerceapp.data
+package com.ozancanguz.e_commerceapp.data.api
 
 import com.ozancanguz.e_commerceapp.data.model.Products
 import retrofit2.Response

@@ -1,6 +1,6 @@
 package com.ozancanguz.e_commerceapp.di
 
-import com.ozancanguz.e_commerceapp.data.ProductsApi
+import com.ozancanguz.e_commerceapp.data.api.ProductsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
