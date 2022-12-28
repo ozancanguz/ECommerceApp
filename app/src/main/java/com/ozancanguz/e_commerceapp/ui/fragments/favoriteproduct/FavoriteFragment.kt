@@ -1,7 +1,10 @@
 package com.ozancanguz.e_commerceapp.ui.fragments.favoriteproduct
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -11,6 +14,7 @@ import com.ozancanguz.e_commerceapp.data.adapters.FavoritesProductsAdapter
 import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
 import com.ozancanguz.e_commerceapp.viewmodel.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class FavoriteFragment : Fragment() {
@@ -56,6 +60,41 @@ class FavoriteFragment : Fragment() {
 
         inflater.inflate(R.menu.deleteallmenu,menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId ==R.id.delete_all_menu){
+
+
+            val builder = AlertDialog.Builder(requireContext())
+
+            builder.setMessage("Do you want to delete all favorites ?")
+
+            builder.setTitle("Delete all favorites !")
+
+            builder.setCancelable(false)
+
+            builder.setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
+                    productViewModel.deleteAll()
+                })
+
+            builder.setNegativeButton("No",
+                DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+
+                    dialog.cancel()
+                } )
+
+            val alertDialog = builder.create()
+            alertDialog.show()
+
+            Toast.makeText(requireContext(),"All favorites Deleted",Toast.LENGTH_LONG).show()
+            
+
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
 

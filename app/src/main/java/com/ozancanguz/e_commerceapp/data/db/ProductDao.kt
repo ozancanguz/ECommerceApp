@@ -33,7 +33,7 @@ interface ProductDao {
 
     // delete all fav
     @Query("delete from favorites_table")
-    fun deleteAll()
+  suspend  fun deleteAll()
 
 
 

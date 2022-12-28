@@ -72,7 +72,7 @@ class ProductListFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        productviewmodel.requestProductData()
+        productviewmodel.REQUESTPRODUCTSDATA()
         productviewmodel.productList.observe(viewLifecycleOwner, Observer { products ->
             Log.d("list",""+products)
             productListAdapter.setData(products)
