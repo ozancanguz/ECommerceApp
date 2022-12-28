@@ -14,6 +14,7 @@ import com.ozancanguz.e_commerceapp.data.adapters.FavoritesProductsAdapter
 import com.ozancanguz.e_commerceapp.databinding.FragmentFavoriteBinding
 import com.ozancanguz.e_commerceapp.viewmodel.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.favorites_deleted_toast.*
 
 
 @AndroidEntryPoint
@@ -78,7 +79,12 @@ class FavoriteFragment : Fragment() {
             builder.setPositiveButton("Yes",
                 DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
                     productViewModel.deleteAll()
-                    Toast.makeText(requireContext(),"All favorites Deleted",Toast.LENGTH_LONG).show()
+                    Toast(requireContext()).apply {
+                        duration=Toast.LENGTH_LONG
+                        setGravity(Gravity.CENTER,0,0)
+                        view=layoutInflater.inflate(R.layout.favorites_deleted_toast,favoritesdeleted)
+                    }.show()
+
 
                 })
 
