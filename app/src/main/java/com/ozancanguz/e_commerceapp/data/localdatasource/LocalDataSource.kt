@@ -1,4 +1,4 @@
-package com.ozancanguz.e_commerceapp.data
+package com.ozancanguz.e_commerceapp.data.localdatasource
 
 import com.ozancanguz.e_commerceapp.data.db.ProductDao
 import com.ozancanguz.e_commerceapp.data.db.entities.ProductEntity
