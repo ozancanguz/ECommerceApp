@@ -42,7 +42,7 @@
         android:id="@+id/sign_inBtn"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="184dp"
         android:backgroundTint="@color/red"
         android:text="Sign In"
         android:textColor="@color/black"
@@ -55,13 +55,13 @@
         android:id="@+id/registerBtn"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="184dp"
         android:backgroundTint="@color/red"
         android:text="Register"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintHorizontal_bias="0.699"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
