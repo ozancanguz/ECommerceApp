@@ -20,6 +20,8 @@ import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.ui.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.signout_toast.*
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
@@ -67,7 +69,11 @@ class MainActivity : AppCompatActivity() {
             auth.signOut()
             val intent= Intent(this, LoginActivity::class.java)
             startActivity(intent)
-           Toast.makeText(this,"You sign out !",Toast.LENGTH_LONG).show()
+            Toast(this).apply {
+                duration=Toast.LENGTH_LONG
+                setGravity(Gravity.CENTER,0,0)
+                view=layoutInflater.inflate(R.layout.signout_toast,signoutt)
+            }.show()
 
 
         }
