@@ -1,8 +1,11 @@
 package com.ozancanguz.e_commerceapp.data.adapters
 
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ozancanguz.e_commerceapp.R
@@ -10,6 +13,7 @@ import com.ozancanguz.e_commerceapp.data.model.Products
 import com.ozancanguz.e_commerceapp.data.model.ProductsItem
 import com.ozancanguz.e_commerceapp.ui.fragments.productlist.ProductListFragmentDirections
 import com.ozancanguz.e_commerceapp.util.Util.Companion.loadImage
+import kotlinx.android.synthetic.main.add_to_cart.*
 import kotlinx.android.synthetic.main.products_row_layout.view.*
 
 class ProductListAdapter:RecyclerView.Adapter<ProductListAdapter.ProductViewHolder>() {
@@ -52,6 +56,7 @@ class ProductListAdapter:RecyclerView.Adapter<ProductListAdapter.ProductViewHold
             holder.itemView.view_wishlist_icon.findNavController()
                 .navigate(R.id.action_productListFragment_to_favoriteFragment)
         }
+
 
 
     }

@@ -39,6 +39,8 @@ class ProductListFragment : Fragment() {
         // set up RV
         setupRv()
 
+
+
         return view
     }
 
@@ -57,6 +59,7 @@ class ProductListFragment : Fragment() {
 
         })
     }
+
 
 
 }
