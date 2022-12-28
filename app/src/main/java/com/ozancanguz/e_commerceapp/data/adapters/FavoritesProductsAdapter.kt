@@ -3,9 +3,11 @@ package com.ozancanguz.e_commerceapp.data.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ozancanguz.e_commerceapp.R
 import com.ozancanguz.e_commerceapp.data.db.entities.FavoritesEntity
+import com.ozancanguz.e_commerceapp.ui.fragments.favoriteproduct.FavoriteFragmentDirections
 import com.ozancanguz.e_commerceapp.util.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.favproducts_row_layout.view.*
 
@@ -36,6 +38,11 @@ class FavoritesProductsAdapter:RecyclerView.Adapter<FavoritesProductsAdapter.Fav
         holder.itemView.favproductName.text=currentFav.products.title
         holder.itemView.favproductPrice.text=currentFav.products.price.toString() +" USD"
 
+
+        holder.itemView.setOnClickListener {
+            val action=FavoriteFragmentDirections.actionFavoriteFragmentToProductDetailFragment(currentFav.products)
+             holder.itemView.findNavController().navigate(action)
+        }
 
     }
 
