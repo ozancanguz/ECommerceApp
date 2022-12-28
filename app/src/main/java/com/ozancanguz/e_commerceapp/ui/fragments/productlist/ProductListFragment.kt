@@ -8,11 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ozancanguz.e_commerceapp.data.adapters.ProductListAdapter
 import com.ozancanguz.e_commerceapp.databinding.FragmentProductListBinding
+import com.ozancanguz.e_commerceapp.util.observeOnce
 import com.ozancanguz.e_commerceapp.viewmodel.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class ProductListFragment : Fragment() {
@@ -34,7 +37,10 @@ class ProductListFragment : Fragment() {
 
 
         // observeLiveData
-        observeLiveData()
+        //observeLiveData()
+
+        // load from database  instead of observe live data
+        listProductsFromDatabase()
 
         // set up RV
         setupRv()
@@ -50,14 +56,37 @@ class ProductListFragment : Fragment() {
         binding.recyclerView2.adapter=productListAdapter
     }
 
+    fun listProductsFromDatabase(){
+           lifecycleScope.launch {
+               productviewmodel.listproductList.observeOnce(viewLifecycleOwner, Observer { database ->
+                   if(database.isNotEmpty()){
+                       Log.d("viewmodel","database called")
+                           productListAdapter.setData(database[0].product)
+
+                   }else{
+                       Log.d("viewmodel","requested from api")
+                           observeLiveData()
+                   }
+               })
+           }
+    }
+
     private fun observeLiveData() {
         productviewmodel.requestProductData()
         productviewmodel.productList.observe(viewLifecycleOwner, Observer { products ->
             Log.d("list",""+products)
             productListAdapter.setData(products)
-
-
         })
+    }
+
+    private fun loadDataFromCache() {
+        lifecycleScope.launch {
+            productviewmodel.listproductList.observe(viewLifecycleOwner) { database ->
+                if (database.isNotEmpty()) {
+                    productListAdapter.setData(database[0].product)
+                }
+            }
+        }
     }
 
 

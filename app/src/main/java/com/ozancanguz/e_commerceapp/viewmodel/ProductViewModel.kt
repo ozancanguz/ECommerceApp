@@ -33,12 +33,15 @@ class ProductViewModel@Inject constructor(private val repository: Repository, ap
 
     // save to db
     fun saveProductsToDb(products:Products){
-        var product=ProductEntity(products)
-        insertProduct(product)
+        var productEntity=ProductEntity(products)
+        insertProduct(productEntity)
     }
 
 
 
+     fun REQUESTPRODUCTSDATA(){
+         requestProductData()
+     }
 
     // for retrofit call
     fun requestProductData(){
