@@ -31,6 +31,10 @@ interface ProductDao {
     suspend fun insertFavProduct(favoritesEntity: FavoritesEntity)
 
 
+    // delete all fav
+    @Query("delete from favorites_table")
+    fun deleteAll()
+
 
 
 }

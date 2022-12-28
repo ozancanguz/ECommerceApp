@@ -42,6 +42,12 @@ class ProductViewModel@Inject constructor(private val repository: Repository, ap
         }
     }
 
+    // delete all from fav screen
+    fun deleteAll(){
+        viewModelScope.launch {
+            repository.local.deleteAll()
+        }
+    }
 
 
     // save to db
