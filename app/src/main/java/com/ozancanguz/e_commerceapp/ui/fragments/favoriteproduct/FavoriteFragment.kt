@@ -78,6 +78,8 @@ class FavoriteFragment : Fragment() {
             builder.setPositiveButton("Yes",
                 DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
                     productViewModel.deleteAll()
+                    Toast.makeText(requireContext(),"All favorites Deleted",Toast.LENGTH_LONG).show()
+
                 })
 
             builder.setNegativeButton("No",
@@ -89,8 +91,7 @@ class FavoriteFragment : Fragment() {
             val alertDialog = builder.create()
             alertDialog.show()
 
-            Toast.makeText(requireContext(),"All favorites Deleted",Toast.LENGTH_LONG).show()
-            
+
 
         }
 

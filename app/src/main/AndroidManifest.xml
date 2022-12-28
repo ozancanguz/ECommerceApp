@@ -13,13 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp">
         <activity
-            android:name=".ui.fragments.productlist.ProductListFragment"
-            android:exported="false" />
+            android:name=".ui.login.LoginActivity"
+            android:exported="true" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

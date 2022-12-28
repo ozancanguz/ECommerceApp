@@ -4,18 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/border_24dp.xml" value="0.145" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/darkback.xml" value="0.145" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/ic_buy.xml" value="0.145" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/round_corners.xml" value="0.142" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/splashback.xml" value="0.145" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_product_list_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_splash.xml" value="0.19972826086956522" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/add_to_cart.xml" value="0.33" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/favoritesproduct_row_layout.xml" value="0.9709302325581395" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/favproducts_row_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/fragment_favorite.xml" value="0.18614130434782608" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/fragment_product_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/fragment_product_list.xml" value="0.2006340579710145" />
-        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/products_row_layout.xml" value="0.25" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/products_row_layout.xml" value="0.22" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/menu/deleteallmenu.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/menu/savetofav.xml" value="0.20416666666666666" />

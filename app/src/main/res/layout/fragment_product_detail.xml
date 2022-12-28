@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@drawable/darkback">
 
     <ImageView
         android:id="@+id/detailsImage"
@@ -23,6 +23,7 @@
         android:layout_marginTop="16dp"
         tools:text="Product Title"
         android:textSize="30sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/detailsPrice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detailsImage" />
@@ -30,6 +31,7 @@
     <TextView
         android:id="@+id/detailsPrice"
         android:layout_width="0dp"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:textStyle="bold"
@@ -45,6 +47,7 @@
         android:layout_width="378dp"
         android:layout_height="94dp"
         android:layout_margin="16dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/addToCartButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +65,7 @@
         android:layout_marginBottom="56dp"
         android:backgroundTint="#1aaa1a"
         android:text="Add to cart"
-        android:textColor="#FFF"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
