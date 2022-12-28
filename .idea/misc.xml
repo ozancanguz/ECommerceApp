@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/border_24dp.xml" value="0.145" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/drawable/ic_buy.xml" value="0.145" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/activity_product_list_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/layout/products_row_layout.xml" value="0.25" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/RealAndroiApps/ECommerceApp/app/src/main/res/menu/signoutmenu.xml" value="0.20416666666666666" />
       </map>
